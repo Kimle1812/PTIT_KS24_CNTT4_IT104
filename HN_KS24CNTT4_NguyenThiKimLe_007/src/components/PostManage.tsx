@@ -3,14 +3,22 @@ import React, { useEffect, useState } from 'react'
 import PostList from './PostList'
 import AddPost from './AddPost'
 
-export default function PostManage() {
-  const [posts, setPosts] = useState<{ title: string; content: string }[]>([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+interface Post {
+  title: string;
+  content: string;
+  liked: boolean;
+}
 
-  const defaultPosts = [
-    { title: "Tiêu đề 1", content: "Nội dung 1" },
-    { title: "Tiêu đề 2", content: "Nội dung 2" },
-    { title: "Tiêu đề 3", content: "Nội dung 3" },
+export default function PostManage() {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [filter, setFilter] = useState("all");
+
+  // Dữ liệu mẫu ban đầu
+  const defaultPosts: Post[] = [
+    { title: "Tiêu đề 1", content: "Nội dung 1", liked: false },
+    { title: "Tiêu đề 2", content: "Nội dung 2", liked: false },
+    { title: "Tiêu đề 3", content: "Nội dung 3", liked: false },
   ];
 
   useEffect(() => {
@@ -24,15 +32,25 @@ export default function PostManage() {
   }, []);
 
   const handleAddPost = (newPost: { title: string; content: string }) => {
-    const updatedPosts = [...posts, newPost];
+    const updatedPosts = [...posts, { ...newPost, liked: false }];
     setPosts(updatedPosts);
     localStorage.setItem("posts", JSON.stringify(updatedPosts));
     setIsModalOpen(false);
   };
 
-  const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+  const handleToggleLike = (index: number) => {
+    const updatedPosts = [...posts];
+    updatedPosts[index].liked = !updatedPosts[index].liked;
+    setPosts(updatedPosts);
+    localStorage.setItem("posts", JSON.stringify(updatedPosts));
   };
+
+  const handleChange = (value: string) => {
+    setFilter(value);
+  };
+
+  const filteredPosts =
+    filter === "fav" ? posts.filter((p) => p.liked) : posts;
 
   return (
     <div className="bg-gradient-to-r from-blue-500 to-purple-600 flex flex-col items-center">
@@ -43,7 +61,9 @@ export default function PostManage() {
             <p className="text-white">Bài viết</p>
           </button>
           <button className="w-30 h-30 rounded-xl bg-[#fffdfd32]">
-            <p className="font-extrabold text-white">1</p>
+            <p className="font-extrabold text-white">
+              {posts.filter((p) => p.liked).length}
+            </p>
             <p className="text-white">Lượt thích</p>
           </button>
         </div>
@@ -52,10 +72,13 @@ export default function PostManage() {
             <div className="flex gap-4 items-center">
               <p>Lọc theo: </p>
               <Select
-                defaultValue="Tất cả bài viết"
+                defaultValue="all"
                 style={{ width: 200 }}
                 onChange={handleChange}
-                options={[{ value: 'fav', label: 'Yêu thích' }]}
+                options={[
+                  { value: "all", label: "Tất cả bài viết" },
+                  { value: "fav", label: "Yêu thích" },
+                ]}
               />
             </div>
             <button
@@ -68,7 +91,7 @@ export default function PostManage() {
         </div>
       </div>
 
-      <PostList posts={posts} />
+      <PostList posts={filteredPosts} onToggleLike={handleToggleLike} />
 
       {isModalOpen && (
         <AddPost
