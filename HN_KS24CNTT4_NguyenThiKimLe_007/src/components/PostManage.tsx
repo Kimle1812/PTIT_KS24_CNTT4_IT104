@@ -14,7 +14,6 @@ export default function PostManage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filter, setFilter] = useState("all");
 
-  // Dữ liệu mẫu ban đầu
   const defaultPosts: Post[] = [
     { title: "Tiêu đề 1", content: "Nội dung 1", liked: false },
     { title: "Tiêu đề 2", content: "Nội dung 2", liked: false },

@@ -26,7 +26,6 @@ export default function AddPost({ onClose, onAdd }: AddPostProps) {
       return;
     }
 
-    // Nếu hợp lệ thì thêm bài viết
     onAdd({ title, content });
     setTitle("");
     setContent("");
