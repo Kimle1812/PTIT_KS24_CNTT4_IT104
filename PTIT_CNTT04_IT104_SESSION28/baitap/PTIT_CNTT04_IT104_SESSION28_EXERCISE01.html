@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+        function calculate(a,b,c){
+            let result = a+ b;
+            c(result);
+        }
+        function callbackCalculate(result){
+            console.log("Kết quả của phép toán là: " , result);
+        }
+        let numberA = +prompt("Mời nhập số thứ nhất");
+        let numberB = +prompt("Mời nhập số thứ hai");
+        calculate(numberA,numberB,callbackCalculate);
+    </script>
+</body>
+</html>

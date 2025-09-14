@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        function processArray(callback,arr){
+            for(let i = 0; i < arr.length;i++){
+                setTimeout(()=>{
+                    callbackArray(arr,i);
+                }, i * 1000)
+            }
+            
+        }
+        function callbackArray(arr,i){
+            console.log(`Phần tử thứ ${i + 1} : ${arr[i]}`);
+        }
+        
+        let arr=[1,2,3,5,6];
+       
+        processArray(callbackArray,arr);
+    </script>
+</body>
+</html>

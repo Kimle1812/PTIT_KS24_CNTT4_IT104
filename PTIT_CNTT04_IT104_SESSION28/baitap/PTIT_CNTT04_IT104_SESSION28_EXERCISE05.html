@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkCondition(condition,display){
+            setTimeout(()=>{
+                display(condition);
+            },1000);
+        }
+        function display(condition){
+            if (condition) {
+                console.log("True");
+            }else{
+                console.log("False");
+            }
+        }
+        checkCondition(true,display);
+        checkCondition(false,display);
+    </script>
+</body>
+</html>

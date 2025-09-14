@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+    <script>
+        function myFilter(array, search, callback) {
+            let result = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == search) {
+                    result.push(array[i]);
+                }
+            }
+            callback(result);
+        }
+
+        function callbackFilter(arr) {
+            if (arr.length > 0) {
+                console.log(arr);
+            } else {
+                console.log([]);
+            }
+        }
+
+        const numbers = [1, 2, 2, 3, 4, 5, 6];
+        myFilter(numbers, 2, callbackFilter); 
+        myFilter(numbers, 10, callbackFilter);
+    </script>
+</body>
+</html>
