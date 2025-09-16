@@ -1,0 +1,73 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "product_name": "iPhone 15",
+      "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/09/anh-anime-chibi.jpg?ssl=1",
+      "price": 25000000,
+      "quantity": 10,
+      "created_at": "2025-09-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "product_name": "Samsung Galaxy S24",
+      "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/09/anh-anime-chibi.jpg?ssl=1",
+      "price": 22000000,
+      "quantity": 8,
+      "created_at": "2025-09-02T12:00:00Z"
+    },
+    {
+      "id": 3,
+      "product_name": "MacBook Pro 14",
+      "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/09/anh-anime-chibi.jpg?ssl=1",
+      "price": 45000000,
+      "quantity": 5,
+      "created_at": "2025-09-05T09:30:00Z"
+    },
+    {
+      "id": 4,
+      "product_name": "iPad Pro 12.9",
+      "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/09/anh-anime-chibi.jpg?ssl=1",
+      "price": 30000000,
+      "quantity": 7,
+      "created_at": "2025-09-06T14:00:00Z"
+    },
+    {
+      "id": 5,
+      "product_name": "AirPods Pro 2",
+      "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/09/anh-anime-chibi.jpg?ssl=1",
+      "price": 5500000,
+      "quantity": 20,
+      "created_at": "2025-09-10T16:00:00Z"
+    }
+  ],
+  "student": [
+    {
+      "id": 3,
+      "student_name": "Phạm Văn C",
+      "email": "vanc@example.com",
+      "address": "Đà Nẵng",
+      "phone": "0901234567",
+      "status": true,
+      "created_at": "2025-09-03T14:00:00Z"
+    },
+    {
+      "id": 4,
+      "student_name": "Lê Thị D",
+      "email": "thid@example.com",
+      "address": "Hải Phòng",
+      "phone": "0934567890",
+      "status": true,
+      "created_at": "2025-09-04T16:20:00Z"
+    },
+    {
+      "id": 5,
+      "student_name": "Đỗ Văn E",
+      "email": "vane@example.com",
+      "address": "Cần Thơ",
+      "phone": "0978123456",
+      "status": false,
+      "created_at": "2025-09-05T11:10:00Z"
+    }
+  ]
+}
