@@ -1,0 +1,27 @@
+
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "học reactjs",
+      "image": "typicode",
+      "date":"17/9",
+      "status":true
+    },
+     {
+      "id": 2,
+      "title": "học API",
+      "image": "typicode",
+      "date":"17/9",
+      "status":false
+    },
+     {
+      "id": 3,
+      "title": "học json-server",
+      "image": "typicode",
+      "date":"17/9",
+      "status":true
+    }
+  ]
+
+}
