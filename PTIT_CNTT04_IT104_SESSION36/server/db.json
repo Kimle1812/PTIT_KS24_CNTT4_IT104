@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Kim Kim",
+      "completed": true,
+      "priority": "Cao"
+    },
+    {
+      "id": 2,
+      "name": "Kim Nguyễn",
+      "completed": false,
+      "priority": "Thấp"
+    },
+    {
+      "id": 2,
+      "name": "Kim Lệ",
+      "completed": false,
+      "priority": "Trung Bình"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -21,7 +21,7 @@ export default function Menu() {
 
   return (
     <div>
-        <h1>Bai 5</h1>
+        <h1>Bài 5</h1>
       <div>
         <ScheduleOutlined />
         {!result && <span>Bảng điều khiển</span>}

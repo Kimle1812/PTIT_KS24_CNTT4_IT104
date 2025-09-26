@@ -13,7 +13,7 @@ export default function Favorites() {
 
   return (
     <div>
-        <h1>Bai 7</h1>
+        <h2>Bài 7</h2>
       {users.map((value: any) => (
         <div key={value.id}>
           <p>UserName: {value.userName}</p>

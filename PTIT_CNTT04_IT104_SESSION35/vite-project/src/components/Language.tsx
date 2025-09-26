@@ -13,7 +13,7 @@ export default function Language() {
 
   return (
     <div>
-      <h1>Bài 6</h1>
+      <h2>Bài 6</h2>
       <select value={lang} onChange={handleChange}>
         <option value="en">English</option>
         <option value="vi">Vietnamese</option>

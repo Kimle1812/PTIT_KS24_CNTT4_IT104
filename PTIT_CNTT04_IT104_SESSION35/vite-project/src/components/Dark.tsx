@@ -13,7 +13,7 @@ export default function Dark() {
     }
   return (
     <div> 
-        <h1>Bài 3</h1>
+        <h2>Bài 3</h2>
     <div style={{
         border:"1px solid red" , 
         width:"200px",

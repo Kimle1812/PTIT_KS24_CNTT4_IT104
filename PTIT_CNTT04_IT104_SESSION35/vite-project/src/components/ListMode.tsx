@@ -14,7 +14,7 @@ export default function ListMode() {
     }
   return (
     <>
-    <h1>BAi4 </h1>
+    <h2>Bài 4 </h2>
       <button onClick={handleListMode}>list Mode</button>
       <div style={{
         display: "flex",
