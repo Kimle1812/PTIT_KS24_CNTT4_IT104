@@ -14,8 +14,6 @@ const App: React.FC = () => {
   const [editing, setEditing] = useState<Partial<Student> | undefined>(
     undefined
   );
-
-
   const [search, setSearch] = useState("");
   const [gradeFilter, setGradeFilter] = useState<string>("all");
   const [sortBy, setSortBy] = useState<"name" | "age">("name");

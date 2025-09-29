@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Đắc Nhân Tâm",
+      "author": "D",
+      "year": 2022,
+      "category": "Danh mục 1"
+    },
+    {
+      "id": 2,
+      "title": "Gió lạnh đầu mùa",
+      "author": "Thạch Lam",
+      "year": 2020,
+      "category": "Danh mục 2"
+    },
+    {
+      "id": 3,
+      "title": "Cha giàu cha nghèo",
+      "author": "C",
+      "year": 2020,
+      "category": "Danh mục 3"
+    },
+    {
+      "title": "dddd",
+      "author": "aaa",
+      "year": 2025,
+      "category": "xxxx",
+      "id": 4
+    }
+  ]
+}
